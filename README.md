@@ -1,46 +1,74 @@
 # Analysis of Factors Affecting Used Car Prices
 
-## Project Overview
+## About the Project
 
-This project analyzes the factors that influence used car prices using data analytics techniques.
+Buying a used car is not just about choosing a model. The price can change a lot depending on things like the car's age, mileage, brand and specifications.
 
-## Research Questions
+In this project, I used a used-car dataset from CarDekho to explore which factors are most closely related to the selling price of a car.
 
-- How does car age affect price?
-- How does mileage affect price?
-- Which brands have the highest average prices?
-- Does transmission type affect price?
-- Does fuel type affect price?
-- Does engine power affect price?
-- Which factors have the strongest relationship with price?
+The main focus is on finding patterns in the data rather than building a price prediction model.
 
-## Methodology
+## Questions I Wanted to Answer
 
-The project will involve:
+The analysis is based around five main questions:
 
-1. Data collection
-2. Data cleaning and preprocessing
-3. Exploratory Data Analysis (EDA)
-4. Statistical analysis
-5. Data visualization
-6. Interpretation of findings
-7. Optional regression analysis
+1. Does the age of a car affect its selling price?
+2. Does higher mileage generally mean a lower price?
+3. How different are selling prices between brands?
+4. Do fuel type and transmission type affect price?
+5. Are engine size and maximum power related to selling price?
 
-## Tools
+## Dataset
+
+The dataset contains information about used cars, including:
+
+- Car name and brand
+- Vehicle age
+- Kilometers driven
+- Fuel type
+- Transmission type
+- Engine size
+- Maximum power
+- Mileage
+- Number of seats
+- Selling price
+
+The original dataset contains **15,411 records** and **14 columns**.
+
+## Data Cleaning
+
+Before starting the analysis, I checked the dataset for missing values, duplicate records and unusual values.
+
+The following cleaning steps were carried out:
+
+- Removed duplicate records
+- Removed two cars with an invalid seat value of 0
+- Removed one extreme mileage value of 3.8 million km
+- Kept other unusual but possible values instead of removing them automatically
+
+After cleaning, **15,241 records** were used for the analysis.
+
+## Analysis
+
+The analysis was carried out in a Jupyter Notebook using Python.
+
+For each research question, I used simple comparisons, correlations and visualizations to look for patterns in the data.
+
+Some of the main observations were:
+
+- Newer cars generally have higher selling prices.
+- Higher mileage is generally associated with lower prices.
+- Selling prices vary considerably between brands.
+- Automatic cars have a higher median selling price than manual cars.
+- Max power has a strong positive relationship with selling price.
+- Engine size also has a positive relationship with selling price.
+
+## Tools Used
 
 - Python
 - Pandas
 - NumPy
 - Matplotlib
 - Seaborn
-- Scikit-learn
+- Jupyter Notebook
 
-## Project Structure
-
-```text
-data/             Dataset
-notebooks/        Jupyter notebooks
-src/              Python source code
-reports/          Findings and documentation
-visualizations/   Generated charts
-eof
