@@ -33,7 +33,7 @@ The dataset contains information about used cars, including:
 - Number of seats
 - Selling price
 
-The original dataset contains **15,411 records** and **14 columns**.
+The original dataset contains 15,411 records and 14 columns.
 
 ## Data Cleaning
 
@@ -46,7 +46,7 @@ The following cleaning steps were carried out:
 - Removed one extreme mileage value of 3.8 million km
 - Kept other unusual but possible values instead of removing them automatically
 
-After cleaning, **15,241 records** were used for the analysis.
+After cleaning, 15,241 records were used for the analysis.
 
 ## Analysis
 
