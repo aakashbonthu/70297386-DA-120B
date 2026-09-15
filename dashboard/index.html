@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Used Car Price Analysis</title>
+  <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.5.3/papaparse.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div>
+        <p class="eyebrow">DATA ANALYTICS PROJECT</p>
+        <h1>Analysis of Factors Affecting Used Car Prices</h1>
+        <p class="subtitle">Interactive dashboard for analysis of factors related to used car selling prices.</p>
+      </div>
+      <div class="badge">15,241 cars analyzed</div>
+    </header>
+
+    <section class="filters">
+      <div>
+        <label for="brandFilter">Brand</label>
+        <select id="brandFilter">
+          <option value="All">All brands</option>
+        </select>
+      </div>
+      <div>
+        <label for="fuelFilter">Fuel Type</label>
+        <select id="fuelFilter">
+          <option value="All">All fuel types</option>
+        </select>
+      </div>
+      <div>
+        <label for="transmissionFilter">Transmission</label>
+        <select id="transmissionFilter">
+          <option value="All">All transmissions</option>
+        </select>
+      </div>
+      <button id="resetBtn">Reset</button>
+    </section>
+
+    <section class="kpis">
+      <div class="card">
+        <span>Cars</span>
+        <strong id="carsKpi">—</strong>
+      </div>
+      <div class="card">
+        <span>Median Price</span>
+        <strong id="priceKpi">—</strong>
+      </div>
+      <div class="card">
+        <span>Average Age</span>
+        <strong id="ageKpi">—</strong>
+      </div>
+      <div class="card">
+        <span>Average Mileage</span>
+        <strong id="mileageKpi">—</strong>
+      </div>
+    </section>
+
+    <section class="grid">
+      <div class="panel">
+        <div class="panel-title">
+          <h2>Price by Vehicle Age</h2>
+          <p>Median selling price by age group</p>
+        </div>
+        <div id="ageChart"></div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-title">
+          <h2>Price vs Mileage</h2>
+          <p>Relationship between mileage and price</p>
+        </div>
+        <div id="mileageChart"></div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-title">
+          <h2>Median Price by Brand</h2>
+          <p>Brands with at least 50 cars</p>
+        </div>
+        <div id="brandChart"></div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-title">
+          <h2>Price by Fuel Type</h2>
+          <p>Median selling price</p>
+        </div>
+        <div id="fuelChart"></div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-title">
+          <h2>Price by Transmission</h2>
+          <p>Median selling price</p>
+        </div>
+        <div id="transmissionChart"></div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-title">
+          <h2>Engine Size vs Price</h2>
+          <p>Engine size and selling price</p>
+        </div>
+        <div id="engineChart"></div>
+      </div>
+
+      <div class="panel wide">
+        <div class="panel-title">
+          <h2>Max Power vs Price</h2>
+          <p>Strongest numerical relationship examined (r = +0.75)</p>
+        </div>
+        <div id="powerChart"></div>
+      </div>
+    </section>
+
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
